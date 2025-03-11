@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block addcss %}
+    <link rel="stylesheet" href="{% static 'css/compound.css' %}">
+
+{% endblock %}
+
+{% block main %}
+    <div id="compounddiv">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="number" name="et1" placeholder="Principle Amount"><br><br>
+            <input type="text" name="et2" placeholder="Intrest Rate"><br><br>
+            <input type="number" name="et3" placeholder="Tensure"><br><br>
+            <p>Principle Amount                  {{principle}}</p>
+            <p>Total Compound Intrest               {{msg}}</p>
+            <input type="submit" value="Intrest">
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bse.css' %}">
+    {% block addcss %}
+
+    {% endblock %}
+</head>
+<body>
+    <div id="heder">
+        <h1>Intrest And Compound Calculation</h1>
+    </div>
+    <div id="actions">
+        <a href="Intrest">Intrest</a>
+        <a href="Compound">Compound</a>
+    </div>
+    <div id="maincontent">
+        {% block main %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
